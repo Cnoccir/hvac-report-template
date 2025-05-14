@@ -1,0 +1,401 @@
+{
+  "reportInfo": {
+    "title": "HVAC Service Report",
+    "client": {
+      "name": "Clifton Public Schools",
+      "companyName": "AME Inc.",
+      "companyAddress": {
+        "line1": "1275 Bloomfield Ave., Building 2 Suite 17B",
+        "city": "Fairfield",
+        "state": "NJ",
+        "zip": "07004"
+      },
+      "companyPhone": "(973) 884-4100"
+    },
+    "dateRange": {
+      "start": "2025-03-01",
+      "end": "2025-04-30",
+      "display": "March-April 2025"
+    },
+    "generateDate": "2025-05-08"
+  },
+  "branding": {
+    "colors": {
+      "primary": "#E83A3A",
+      "secondary": "#1D0F5A",
+      "accent": "#3A6EE8",
+      "light": "#6AAFE8",
+      "gray": "#666666",
+      "text": "#000000",
+      "lightGrey": "#F2F2F2",
+      "mediumGrey": "#DDDDDD",
+      "darkGrey": "#777777"
+    },
+    "logo": {
+      "url": "/images/company-logo.svg",
+      "alt": "AME Inc. Logo"
+    },
+    "favicon": "/favicon.ico"
+  },
+  "baseUrls": {
+    "images": "/images",
+    "reports": "/reports",
+    "docs": "/docs"
+  },
+  "metrics": {
+    "summary": {
+      "locations": 11,
+      "visits": 24,
+      "hours": 102,
+      "technicians": 4
+    },
+    "monthly": [
+      { "month": "March", "hours": 59.5 },
+      { "month": "April", "hours": 42.5 }
+    ],
+    "calendar": [
+      { 
+        "month": "March", 
+        "weeks": {
+          "Week 1 (3/1-3/7)": 35,
+          "Week 2 (3/8-3/14)": 0,
+          "Week 3 (3/15-3/21)": 12.5,
+          "Week 4 (3/22-3/28)": 19
+        }
+      },
+      { 
+        "month": "April", 
+        "weeks": {
+          "Week 1 (4/1-4/7)": 0,
+          "Week 2 (4/8-4/14)": 15.5,
+          "Week 3 (4/15-4/21)": 8,
+          "Week 4 (4/22-4/28)": 10,
+          "Week 5 (4/29-4/30)": 5
+        }
+      }
+    ]
+  },
+  "data": {
+    "locations": [
+      {
+        "id": 1,
+        "name": "Clifton High School",
+        "address": "333 Colfax Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07013",
+        "visits": 3,
+        "hours": 21.5,
+        "coordinates": {
+          "lat": 40.868145,
+          "lng": -74.164007
+        },
+        "technicians": ["Rupert Chandool", "Richard Bhajan"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 2,
+        "name": "Clifton Stadium Weight Room",
+        "address": "350 Piaget Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 2,
+        "hours": 9,
+        "coordinates": {
+          "lat": 40.874987,
+          "lng": -74.162859
+        },
+        "technicians": ["Rupert Chandool", "Threshan Ramsarran"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 3,
+        "name": "Clifton Public School #1",
+        "address": "158 Park Slope",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 2,
+        "hours": 8,
+        "coordinates": {
+          "lat": 40.879012,
+          "lng": -74.168229
+        },
+        "technicians": ["Rupert Chandool"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 4,
+        "name": "Clifton Public School #3",
+        "address": "365 Washington Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 2,
+        "hours": 6,
+        "coordinates": {
+          "lat": 40.876438,
+          "lng": -74.164721
+        },
+        "technicians": ["Rupert Chandool", "Henry Sanchez", "Threshan Ramsarran"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 5,
+        "name": "Clifton Public School #4",
+        "address": "194 West 2nd Street",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 2,
+        "hours": 5,
+        "coordinates": {
+          "lat": 40.882364,
+          "lng": -74.163297
+        },
+        "technicians": ["Rupert Chandool", "Henry Sanchez"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 6,
+        "name": "Clifton Public School #5",
+        "address": "136 Valley Road",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07013",
+        "visits": 3,
+        "hours": 9,
+        "coordinates": {
+          "lat": 40.888219,
+          "lng": -74.167086
+        },
+        "technicians": ["Rupert Chandool", "Henry Sanchez", "Threshan Ramsarran"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 7,
+        "name": "Clifton Public School #9",
+        "address": "25 Brighton Road",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07012",
+        "visits": 2,
+        "hours": 8,
+        "coordinates": {
+          "lat": 40.857428,
+          "lng": -74.163247
+        },
+        "technicians": ["Rupert Chandool"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 8,
+        "name": "Clifton Public School #11",
+        "address": "147 Merselis Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 3,
+        "hours": 15.5,
+        "coordinates": {
+          "lat": 40.884931,
+          "lng": -74.153508
+        },
+        "technicians": ["Rupert Chandool", "Threshan Ramsarran"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 9,
+        "name": "Clifton Public School #14",
+        "address": "99 Saint Andrews Blvd",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07013",
+        "visits": 3,
+        "hours": 7,
+        "coordinates": {
+          "lat": 40.864582,
+          "lng": -74.165423
+        },
+        "technicians": ["Rupert Chandool"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 10,
+        "name": "Clifton School #17",
+        "address": "361 Lexington Avenue",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07011",
+        "visits": 1,
+        "hours": 3.5,
+        "coordinates": {
+          "lat": 40.872104,
+          "lng": -74.159216
+        },
+        "technicians": ["Rupert Chandool"],
+        "imageUrl": "school-placeholder.svg"
+      },
+      {
+        "id": 11,
+        "name": "Clifton Early Learner Academy",
+        "address": "290 Brighton Road",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07012",
+        "visits": 2,
+        "hours": 9,
+        "coordinates": {
+          "lat": 40.855403,
+          "lng": -74.167211
+        },
+        "technicians": ["Rupert Chandool"],
+        "imageUrl": "school-placeholder.svg"
+      }
+    ],
+    "technicians": [
+      { "name": "Rupert Chandool", "visits": 22, "hours": 76 },
+      { "name": "Richard Bhajan", "visits": 1, "hours": 5.5 },
+      { "name": "Henry Sanchez", "visits": 3, "hours": 8 },
+      { "name": "Threshan Ramsarran", "visits": 4, "hours": 12.5 }
+    ],
+    "visits": [
+      { "date": "2025-03-03", "location": "Clifton High School", "tech": "Rupert Chandool", "hours": 8 },
+      { "date": "2025-03-04", "location": "Clifton Stadium Weight Room", "tech": "Rupert Chandool, Threshan Ramsarran", "hours": 7 },
+      { "date": "2025-03-04", "location": "Clifton Public School #11", "tech": "Rupert Chandool, Threshan Ramsarran", "hours": 9 },
+      { "date": "2025-03-06", "location": "Clifton Public School #1", "tech": "Rupert Chandool", "hours": 4 },
+      { "date": "2025-03-06", "location": "Clifton Public School #9", "tech": "Rupert Chandool", "hours": 4 },
+      { "date": "2025-03-07", "location": "Clifton Public School #14", "tech": "Rupert Chandool", "hours": 3 },
+      { "date": "2025-03-21", "location": "Clifton Public School #3", "tech": "Henry Sanchez, Threshan Ramsarran", "hours": 4 },
+      { "date": "2025-03-21", "location": "Clifton Public School #4", "tech": "Henry Sanchez", "hours": 3 },
+      { "date": "2025-03-21", "location": "Clifton Public School #5", "tech": "Henry Sanchez, Threshan Ramsarran", "hours": 5.5 },
+      { "date": "2025-03-24", "location": "Clifton High School", "tech": "Richard Bhajan", "hours": 5.5 },
+      { "date": "2025-03-24", "location": "Clifton Early Learner Academy", "tech": "Rupert Chandool", "hours": 4.5 },
+      { "date": "2025-04-09", "location": "Clifton Early Learner Academy", "tech": "Rupert Chandool", "hours": 4.5 },
+      { "date": "2025-04-10", "location": "Clifton Public School #11", "tech": "Rupert Chandool", "hours": 3 },
+      { "date": "2025-04-10", "location": "Clifton Public School #14", "tech": "Rupert Chandool", "hours": 2 },
+      { "date": "2025-04-11", "location": "Clifton Public School #4", "tech": "Rupert Chandool", "hours": 2 },
+      { "date": "2025-04-11", "location": "Clifton School #17", "tech": "Rupert Chandool", "hours": 3.5 },
+      { "date": "2025-04-21", "location": "Clifton Public School #1", "tech": "Rupert Chandool", "hours": 4 },
+      { "date": "2025-04-21", "location": "Clifton Public School #9", "tech": "Rupert Chandool", "hours": 4 },
+      { "date": "2025-04-23", "location": "Clifton Stadium Weight Room", "tech": "Rupert Chandool", "hours": 2 },
+      { "date": "2025-04-23", "location": "Clifton Public School #5", "tech": "Rupert Chandool", "hours": 2.5 },
+      { "date": "2025-04-23", "location": "Clifton Public School #11", "tech": "Rupert Chandool", "hours": 3.5 },
+      { "date": "2025-04-25", "location": "Clifton High School", "tech": "Rupert Chandool", "hours": 8 },
+      { "date": "2025-04-30", "location": "Clifton Public School #3", "tech": "Rupert Chandool", "hours": 2 },
+      { "date": "2025-04-30", "location": "Clifton Public School #5", "tech": "Rupert Chandool", "hours": 1 },
+      { "date": "2025-04-30", "location": "Clifton Public School #14", "tech": "Rupert Chandool", "hours": 2 }
+    ],
+    "issues": [
+      {
+        "id": 1,
+        "name": "RTU Communication Failures",
+        "priority": "High",
+        "frequency": "27%",
+        "schools": 3,
+        "description": "Multiple RTUs showing offline status, affecting ventilation and temperature control in connected zones",
+        "recommendation": "Schedule immediate mechanical contractor inspection for all affected units",
+        "type": "connectivity",
+        "impact": "Affects 3 schools (PS #17, PS #3, PS #1)",
+        "affectedEquipment": [
+          "RTU-7 at PS #17 (affects 23 VAV boxes)", 
+          "RTU-2 at PS #3 (Auditorium)", 
+          "RTU-1, RTU-2, RTU-3 fan status issues at PS #1"
+        ],
+        "visitRefs": ["211664-13788"]
+      },
+      {
+        "id": 2,
+        "name": "Heating Valve Defects",
+        "priority": "High",
+        "frequency": "36%",
+        "schools": 4,
+        "description": "Heating valves not supplying hot water, causing temperature control issues in multiple zones",
+        "recommendation": "Replace defective Honeywell ML7425A3013 parts and repair valve bodies",
+        "type": "heating",
+        "impact": "Affects 4 schools (Early Learner Academy, PS #11, High School, PS #14)",
+        "affectedEquipment": [
+          "AHU-3 at Early Learner Academy (defective Honeywell ML7425A3013)", 
+          "UV_RM24_EF at PS #11 (valve body leaking)", 
+          "UV_C313_EF at High School", 
+          "HWS Pump 2 at PS #14"
+        ],
+        "visitRefs": ["210965-12939", "210972-12946"]
+      }
+    ],
+    "schoolIssueData": [
+      { "name": "PS #1", "issues": 3 },
+      { "name": "PS #3", "issues": 2 },
+      { "name": "PS #4", "issues": 2 },
+      { "name": "PS #5", "issues": 3 },
+      { "name": "PS #9", "issues": 4 },
+      { "name": "PS #11", "issues": 5 },
+      { "name": "PS #14", "issues": 3 },
+      { "name": "PS #17", "issues": 2 },
+      { "name": "Early Learner Academy", "issues": 7 },
+      { "name": "High School", "issues": 9 },
+      { "name": "Stadium Weight Room", "issues": 1 }
+    ],
+    "serviceReports": {
+      "211664-13788": "211664-13788-PS17.pdf",
+      "210965-12939": "210965-12939-ELA.pdf",
+      "210972-12946": "210972-12946-ELA.pdf"
+    },
+    "visitLogs": {
+      "Clifton High School": [
+        {
+          "date": "March 3, 2025",
+          "technician": "Rupert Chandool",
+          "duration": "8.00 hours",
+          "summary": [
+            "Comprehensive system check with Bogdan.",
+            "Found multiple offline equipment (ERU_A28, ERU_G5, ERU_G16C).",
+            "Several units requiring freeze stat resets.",
+            "Hot water valve issue with UV_C313_EF (valve remains closed despite discharge temp over 100°F).",
+            "Construction team notified to investigate valve issue."
+          ]
+        },
+        {
+          "date": "March 24, 2025",
+          "technician": "Richard Bhajan",
+          "duration": "5.50 hours",
+          "summary": [
+            "Resolved issue with entire 6000 wing by resetting Jace and using bacnet router.",
+            "Documented ongoing freeze stat issues that trip at temperatures up to 58°F.",
+            "Pictures of affected units sent to Vinny for follow-up as requested by customer."
+          ]
+        },
+        {
+          "date": "April 25, 2025",
+          "technician": "Rupert Chandool",
+          "duration": "8.00 hours",
+          "summary": [
+            "Performed full system check and found multiple freeze alarms on UV units.",
+            "Units with freeze alarms: UVN_311, UVN_309b, UVN_218_Ftr, UVS313_EF, UVE205_EF, UVE207_EF, UVE209_EF, UVE211_EF, UVE305_EF.",
+            "Notified D&B to schedule Daikin unit inspection for freeze stat issues in spring.",
+            "Air balancing team was on-site during inspection, causing all heating valve bodies to be 100% open."
+          ]
+        }
+      ]
+    }
+  },
+  "sections": {
+    "executive": true,
+    "map": true,
+    "metrics": true,
+    "timeline": true,
+    "issues": true,
+    "visits": true
+  },
+  "settings": {
+    "mapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY",
+    "enableAnalytics": true,
+    "defaultTab": "executive",
+    "mapCenter": {
+      "lat": 40.873,
+      "lng": -74.163
+    },
+    "mapZoom": 13
+  }
+}

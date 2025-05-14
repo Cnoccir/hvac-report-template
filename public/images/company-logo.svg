@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#1D0F5A" rx="5" ry="5"/>
+  <text x="100" y="35" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">AME Inc.</text>
+  <text x="100" y="50" font-family="Arial" font-size="12" fill="#E83A3A" text-anchor="middle">HVAC Solutions</text>
+</svg>
