@@ -1,155 +1,90 @@
-# HVAC Report Template
+# AME HVAC Report Template
 
-A configurable and reusable template for creating HVAC service reports based on JSON configuration files.
+This project is a configurable HVAC service report template based on the AME Inc. reporting system. It includes all AME branding elements while allowing for data configuration to create reports for different clients.
 
-## Overview
-
-This template allows you to create customized HVAC service reports by simply updating a configuration file, rather than writing code. It's designed to be deployed on Vercel and can be integrated with a backend system for generating reports from user input.
+## Live Demo
+Original AME HVAC Report: [https://ame-hvac-report.vercel.app/](https://ame-hvac-report.vercel.app/)
 
 ## Features
 
-- **Configurable**: All report content and styling is driven by a JSON configuration file
-- **Interactive**: Includes interactive maps, charts, and detailed issue analysis
-- **Responsive**: Works on desktop and mobile devices
-- **Modular**: Each section can be enabled or disabled via configuration
-- **Customizable**: Branding, colors, and layout can be modified via configuration
+- Full AME branding integration
+- Configurable client and project data
+- Interactive dashboard with multiple views:
+  - Executive Summary
+  - Geographic Service Map
+  - Service Metrics
+  - Timeline View
+  - Issue Analysis
+  - Detailed Visit Logs
+- Responsive design for all devices
+- Data-driven visualization with charts and graphs
 
-## Getting Started
+## Setup and Configuration
 
-### Prerequisites
-
-- Node.js 14.x or higher
-- npm or yarn
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-organization/hvac-report-template.git
-   cd hvac-report-template
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Configure your report:
-   - Edit the `config/default.json` file with your report data
-   - Or create a new configuration file in the `config` directory
-
+1. Clone the repository
+2. Install dependencies: 
+```
+npm install
+```
+3. Copy the .env.example to .env.local and configure as needed
 4. Run the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see your report.
-
-### Configuration
-
-The report is entirely driven by a JSON configuration file. A default configuration is provided in `config/default.json`. You can:
-
-- Modify this file directly for a single report
-- Create multiple configuration files for different reports
-- Generate configuration files programmatically via a backend system
-
-To use a different configuration file, specify it in the URL:
 ```
-http://localhost:3000?config=my-custom-config
+npm run dev
 ```
 
-This will load `config/my-custom-config.json` instead of the default.
+## Configuration
 
-## Configuration Structure
+All report data is configured through `config/default.json`. You can modify this file to:
 
-The configuration file has the following structure:
+- Change client information
+- Update service metrics
+- Add/edit locations and service data
+- Customize the issue analysis
+- Configure visit logs
 
-```json
-{
-  "reportInfo": {
-    "title": "HVAC Service Report",
-    "client": {
-      "name": "Client Name",
-      "companyName": "Company Name",
-      // ...more client details
-    },
-    "dateRange": {
-      "start": "2025-03-01",
-      "end": "2025-04-30",
-      "display": "March-April 2025"
-    }
-  },
-  "branding": {
-    "colors": {
-      "primary": "#E83A3A",
-      "secondary": "#1D0F5A",
-      // ...more colors
-    },
-    "logo": {
-      "url": "https://example.com/logo.png",
-      "alt": "Company Logo"
-    }
-  },
-  "data": {
-    "locations": [
-      // Array of locations/schools
-    ],
-    "technicians": [
-      // Array of technicians
-    ],
-    "visits": [
-      // Array of visits
-    ],
-    "issues": [
-      // Array of issues
-    ],
-    // ...more data
-  },
-  "sections": {
-    "executive": true,
-    "map": true,
-    "metrics": true,
-    "timeline": true,
-    "issues": true,
-    "visits": true
-  },
-  "settings": {
-    "mapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY",
-    "enableAnalytics": true,
-    "defaultTab": "executive"
-  }
-}
+## AME Branding
+
+This template includes AME branding elements:
+
+- AME logo (loaded from S3 bucket)
+- AME color scheme (red: #E83A3A, navy: #1D0F5A)
+- AME styling and design patterns
+
+To use with a different company:
+
+1. Set `forceCustomLogo: true` in the config
+2. Update the `logo.url` in the config file
+3. Optionally adjust the color scheme in `branding.colors`
+
+## Development
+
+### Folder Structure
+
+- `/components` - UI components organized by section
+- `/config` - Configuration files
+- `/lib` - Helper functions and context providers
+- `/pages` - Next.js pages
+- `/public` - Static assets
+- `/styles` - Global CSS and styling
+- `/utils` - Utility functions
+
+### Adding New Features
+
+To add new sections or features:
+
+1. Create components in the appropriate directory
+2. Add to the tab configuration in `lib/tabConfig.js`
+3. Enable the section in the config file
+
+### Deployment
+
+This is a Next.js project that can be deployed to Vercel or any other Next.js-compatible hosting service.
+
 ```
-
-See the `config/default.json` file for a complete example.
-
-## Deployment
-
-This project is designed to be deployed on Vercel. To deploy:
-
-1. Push your code to a Git repository
-2. Connect the repository to Vercel
-3. Configure any environment variables (like API keys)
-4. Deploy
-
-## Integration with Backend Systems
-
-This template is designed to work with backend systems that can generate configuration files. The workflow would be:
-
-1. User inputs data through a backend form/wizard
-2. Backend generates a JSON configuration file
-3. The configuration is passed to this template
-4. The template renders the report based on the configuration
+npm run build
+npm start
+```
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- This template was created using Next.js, React, Tailwind CSS, and Recharts
-- Maps are powered by Google Maps API
+Copyright © 2025 AME Inc. All rights reserved.

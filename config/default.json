@@ -32,13 +32,14 @@
       "darkGrey": "#777777"
     },
     "logo": {
-      "url": "/images/company-logo.svg",
-      "alt": "AME Inc. Logo"
+      "url": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/tutor-logo.png",
+      "alt": "AME Inc. Logo",
+      "forceCustomLogo": false
     },
-    "favicon": "/favicon.ico"
+    "favicon": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/favicon.ico"
   },
   "baseUrls": {
-    "images": "/images",
+    "images": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images",
     "reports": "/reports",
     "docs": "/docs"
   },
@@ -91,7 +92,7 @@
           "lng": -74.164007
         },
         "technicians": ["Rupert Chandool", "Richard Bhajan"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 2,
@@ -107,7 +108,7 @@
           "lng": -74.162859
         },
         "technicians": ["Rupert Chandool", "Threshan Ramsarran"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 3,
@@ -123,7 +124,7 @@
           "lng": -74.168229
         },
         "technicians": ["Rupert Chandool"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 4,
@@ -139,7 +140,7 @@
           "lng": -74.164721
         },
         "technicians": ["Rupert Chandool", "Henry Sanchez", "Threshan Ramsarran"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 5,
@@ -155,7 +156,7 @@
           "lng": -74.163297
         },
         "technicians": ["Rupert Chandool", "Henry Sanchez"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 6,
@@ -171,7 +172,7 @@
           "lng": -74.167086
         },
         "technicians": ["Rupert Chandool", "Henry Sanchez", "Threshan Ramsarran"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 7,
@@ -187,7 +188,7 @@
           "lng": -74.163247
         },
         "technicians": ["Rupert Chandool"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 8,
@@ -203,7 +204,7 @@
           "lng": -74.153508
         },
         "technicians": ["Rupert Chandool", "Threshan Ramsarran"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 9,
@@ -219,7 +220,7 @@
           "lng": -74.165423
         },
         "technicians": ["Rupert Chandool"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 10,
@@ -235,7 +236,7 @@
           "lng": -74.159216
         },
         "technicians": ["Rupert Chandool"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       },
       {
         "id": 11,
@@ -251,7 +252,7 @@
           "lng": -74.167211
         },
         "technicians": ["Rupert Chandool"],
-        "imageUrl": "school-placeholder.svg"
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
       }
     ],
     "technicians": [

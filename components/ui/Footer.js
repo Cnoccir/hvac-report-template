@@ -4,19 +4,15 @@ import { useConfig } from '../../lib/ConfigContext';
 import AmeLogo from './AmeLogo';
 
 /**
- * Footer component for the report
+ * Footer component for the report - styled with AME branding
  */
 const Footer = () => {
   const { config } = useConfig();
-  const companyName = config.reportInfo.client.companyName || 'Company Name';
+  const companyName = config.reportInfo.client.companyName || 'AME Inc.';
   const year = new Date().getFullYear();
-  const colors = config.branding.colors;
 
   return (
-    <footer 
-      className="py-4 mt-8 text-white" 
-      style={{ backgroundColor: colors.secondary }}
-    >
+    <footer className="bg-navy text-white py-4 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <AmeLogo size="small" />
