@@ -1,8 +1,4 @@
 // pages/api/config.js
-import path from 'path';
-import fs from 'fs/promises';
-import { validateConfig } from '../../lib/configValidator';
-
 // Default config if file can't be loaded
 const defaultConfig = {
   reportInfo: {
@@ -49,9 +45,29 @@ const defaultConfig = {
     docs: "/docs"
   },
   data: {
-    locations: [],
-    technicians: [],
-    visits: [],
+    locations: [
+      {
+        id: 1,
+        name: "Demo School",
+        address: "123 Example St",
+        city: "Demo City",
+        state: "NY",
+        zip: "10001",
+        visits: 3,
+        hours: 12,
+        coordinates: {
+          lat: 40.7128,
+          lng: -74.006
+        },
+        technicians: ["John Doe"]
+      }
+    ],
+    technicians: [
+      { name: "John Doe", visits: 5, hours: 20 }
+    ],
+    visits: [
+      { date: "2025-03-01", location: "Demo School", tech: "John Doe", hours: 4 }
+    ],
     issues: [],
     schoolIssueData: [],
     visitLogs: {}
@@ -72,77 +88,9 @@ const defaultConfig = {
 };
 
 /**
- * API endpoint that loads and returns the configuration file
- * 
- * This endpoint:
- * 1. Attempts to load the specified config file
- * 2. Validates the configuration
- * 3. Returns the validated configuration
+ * API endpoint that returns configuration
  */
-export default async function handler(req, res) {
-  try {
-    // Get the config filename from query parameters or use default
-    const configName = req.query.config || 'default';
-    
-    // Ensure no path traversal by sanitizing the config name
-    const sanitizedName = path.basename(configName).replace(/[^a-zA-Z0-9\-_]/g, '');
-    
-    // Construct the path to the config file
-    const configPath = path.join(process.cwd(), 'config', `${sanitizedName}.json`);
-    
-    let configData;
-    let config = defaultConfig;
-    
-    try {
-      // Read the config file
-      configData = await fs.readFile(configPath, 'utf8');
-      
-      // Parse the JSON
-      const loadedConfig = JSON.parse(configData);
-      
-      // Merge with default config to ensure required fields
-      config = {
-        ...defaultConfig,
-        ...loadedConfig,
-        // Ensure nested objects are also merged
-        branding: {
-          ...defaultConfig.branding,
-          ...loadedConfig.branding
-        },
-        data: {
-          ...defaultConfig.data,
-          ...loadedConfig.data
-        },
-        sections: {
-          ...defaultConfig.sections,
-          ...loadedConfig.sections
-        },
-        settings: {
-          ...defaultConfig.settings,
-          ...loadedConfig.settings
-        }
-      };
-      
-    } catch (fileError) {
-      console.warn(`Error loading config file ${configPath}: ${fileError.message}. Using default config.`);
-      // Continue with default config
-    }
-    
-    // Validate the configuration (this function would be defined in /lib/configValidator.js)
-    const { valid, errors } = validateConfig(config);
-    
-    if (!valid) {
-      console.warn(`Invalid configuration: ${errors.join(', ')}. Using default config.`);
-      // We'll return the config anyway with a warning header
-      res.setHeader('X-Config-Warning', 'Configuration validation failed');
-    }
-    
-    // Return the configuration
-    res.status(200).json(config);
-  } catch (error) {
-    console.error('Error processing configuration:', error);
-    
-    // Always return something usable
-    res.status(200).json(defaultConfig);
-  }
+export default function handler(req, res) {
+  // Simply return the default config for now
+  res.status(200).json(defaultConfig);
 }
