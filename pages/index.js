@@ -35,14 +35,41 @@ import { tabConfig } from '../lib/tabConfig';
  */
 export default function HVACServiceReport() {
   // Access configuration
-  const { config } = useConfig();
+  const { config, loading, error } = useConfig();
   
-  // Extract necessary config values
-  const { title, client, dateRange } = config.reportInfo;
-  const { colors } = config.branding;
-  const { favicon } = config.branding;
-  const enabledSections = config.sections;
-  const defaultTab = config.settings?.defaultTab || 'executive';
+  // Safely extract values with defaults if needed
+  const title = config?.reportInfo?.title || 'HVAC Service Report';
+  const client = config?.reportInfo?.client || { name: 'Client', companyName: 'Company' };
+  const dateRange = config?.reportInfo?.dateRange || { display: 'Date Range' };
+  const colors = config?.branding?.colors || { primary: '#E83A3A', secondary: '#1D0F5A' };
+  const favicon = config?.branding?.favicon;
+  const enabledSections = config?.sections || { executive: true };
+  const defaultTab = config?.settings?.defaultTab || 'executive';
+  
+  // If still loading, show a loading state
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
+          <p>Loading report data...</p>
+        </div>
+      </div>
+    );
+  }
+  
+  // If there's an error, show an error message
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center bg-red-50 p-6 rounded-lg max-w-md">
+          <h2 className="text-2xl font-bold text-red-700 mb-4">Error Loading Report</h2>
+          <p className="text-red-600 mb-4">{error.message}</p>
+          <p className="text-gray-700">Please try refreshing the page.</p>
+        </div>
+      </div>
+    );
+  }
   
   // Component state
   const [selectedSchool, setSelectedSchool] = useState(null);
@@ -74,7 +101,7 @@ export default function HVACServiceReport() {
   // Handle tab change with analytics tracking
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
-    if (config.settings?.enableAnalytics) {
+    if (config?.settings?.enableAnalytics) {
       trackTabChange(tabId);
     }
   };
@@ -325,18 +352,19 @@ export default function HVACServiceReport() {
   // Metrics View Component
   const MetricsView = () => {
     // Extract necessary data from config
-    const { locations, technicians } = config.data;
-    const dateRange = config.reportInfo.dateRange.display;
-    const clientName = config.reportInfo.client.name;
-    const monthlyHours = config.metrics.monthly || [];
+    const locations = config?.data?.locations || [];
+    const technicians = config?.data?.technicians || [];
+    const dateRange = config?.reportInfo?.dateRange?.display || '';
+    const clientName = config?.reportInfo?.client?.name || '';
+    const monthlyHours = config?.metrics?.monthly || [];
     
     // Calculate total metrics (or use from config if provided)
-    const totalLocations = config.metrics.summary?.locations || locations.length;
-    const totalVisits = config.metrics.summary?.visits || 
-      locations.reduce((sum, location) => sum + location.visits, 0);
-    const totalHours = config.metrics.summary?.hours || 
-      locations.reduce((sum, location) => sum + location.hours, 0);
-    const totalTechnicians = config.metrics.summary?.technicians || 
+    const totalLocations = config?.metrics?.summary?.locations || locations.length;
+    const totalVisits = config?.metrics?.summary?.visits || 
+      locations.reduce((sum, location) => sum + (location.visits || 0), 0);
+    const totalHours = config?.metrics?.summary?.hours || 
+      locations.reduce((sum, location) => sum + (location.hours || 0), 0);
+    const totalTechnicians = config?.metrics?.summary?.technicians || 
       (technicians ? technicians.length : 0);
   
     return (
