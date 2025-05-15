@@ -1,0 +1,241 @@
+{
+  "reportInfo": {
+    "title": "HVAC Service Report",
+    "client": {
+      "name": "Springfield Elementary School",
+      "companyName": "AME Inc.",
+      "companyAddress": {
+        "line1": "1275 Bloomfield Ave., Building 2 Suite 17B",
+        "city": "Fairfield",
+        "state": "NJ",
+        "zip": "07004"
+      },
+      "companyPhone": "(973) 884-4100"
+    },
+    "dateRange": {
+      "start": "2025-05-01",
+      "end": "2025-06-30",
+      "display": "May-June 2025"
+    },
+    "generateDate": "2025-07-08"
+  },
+  "data": {
+    "locations": [
+      {
+        "id": 1,
+        "name": "Springfield Elementary",
+        "address": "123 School Lane",
+        "city": "Springfield",
+        "state": "NJ",
+        "zip": "07081",
+        "visits": 4,
+        "hours": 18,
+        "coordinates": {
+          "lat": 40.712,
+          "lng": -74.213
+        },
+        "technicians": ["John Smith", "David Johnson"],
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Springfield Middle School",
+        "address": "456 Education Boulevard",
+        "city": "Springfield",
+        "state": "NJ",
+        "zip": "07081",
+        "visits": 3,
+        "hours": 12,
+        "coordinates": {
+          "lat": 40.718,
+          "lng": -74.210
+        },
+        "technicians": ["John Smith", "Robert Garcia"],
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Springfield High School",
+        "address": "789 Learning Road",
+        "city": "Springfield",
+        "state": "NJ",
+        "zip": "07081",
+        "visits": 5,
+        "hours": 22,
+        "coordinates": {
+          "lat": 40.722,
+          "lng": -74.219
+        },
+        "technicians": ["John Smith", "David Johnson", "Robert Garcia"],
+        "imageUrl": "https://ame-techassist-bucket.s3.us-east-1.amazonaws.com/ame-report-images/school-placeholder.jpg"
+      }
+    ],
+    "technicians": [
+      { "name": "John Smith", "visits": 12, "hours": 36 },
+      { "name": "David Johnson", "visits": 6, "hours": 21 },
+      { "name": "Robert Garcia", "visits": 8, "hours": 25 }
+    ],
+    "visits": [
+      { "date": "2025-05-03", "location": "Springfield Elementary", "tech": "John Smith", "hours": 4 },
+      { "date": "2025-05-05", "location": "Springfield Middle School", "tech": "John Smith", "hours": 3 },
+      { "date": "2025-05-07", "location": "Springfield High School", "tech": "David Johnson", "hours": 5 },
+      { "date": "2025-05-12", "location": "Springfield High School", "tech": "John Smith, Robert Garcia", "hours": 6 },
+      { "date": "2025-05-15", "location": "Springfield Elementary", "tech": "John Smith", "hours": 4 },
+      { "date": "2025-05-20", "location": "Springfield Middle School", "tech": "Robert Garcia", "hours": 4 },
+      { "date": "2025-05-28", "location": "Springfield High School", "tech": "David Johnson", "hours": 4 },
+      { "date": "2025-06-02", "location": "Springfield Elementary", "tech": "David Johnson", "hours": 5 },
+      { "date": "2025-06-10", "location": "Springfield High School", "tech": "John Smith, Robert Garcia", "hours": 4 },
+      { "date": "2025-06-18", "location": "Springfield Middle School", "tech": "John Smith", "hours": 5 },
+      { "date": "2025-06-24", "location": "Springfield Elementary", "tech": "John Smith", "hours": 5 },
+      { "date": "2025-06-27", "location": "Springfield High School", "tech": "Robert Garcia", "hours": 3 }
+    ],
+    "issues": [
+      {
+        "id": 1,
+        "name": "Cooling System Performance",
+        "priority": "High",
+        "frequency": "66%",
+        "schools": 2,
+        "description": "Reduced cooling capacity in multiple classrooms during peak temperatures",
+        "recommendation": "Schedule comprehensive refrigerant level check and compressor inspection",
+        "type": "cooling",
+        "impact": "Affects 2 schools (Elementary and High School)",
+        "affectedEquipment": [
+          "RTU-3 at Elementary School (serves 8 classrooms)", 
+          "AHU-2 at High School (gymnasium)"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Control System Communication",
+        "priority": "Medium",
+        "frequency": "33%",
+        "schools": 1,
+        "description": "Intermittent loss of communication with building management system",
+        "recommendation": "Upgrade network infrastructure and replace faulty controllers",
+        "type": "connectivity",
+        "impact": "Affects Middle School administrative wing",
+        "affectedEquipment": [
+          "Main control panel", 
+          "Zone controllers in admin section"
+        ]
+      }
+    ],
+    "schoolIssueData": [
+      { "name": "Elementary School", "issues": 5 },
+      { "name": "Middle School", "issues": 3 },
+      { "name": "High School", "issues": 7 }
+    ],
+    "visitLogs": {
+      "Springfield Elementary": [
+        {
+          "date": "May 3, 2025",
+          "technician": "John Smith",
+          "duration": "4.00 hours",
+          "summary": [
+            "Performed seasonal inspection of cooling systems",
+            "Identified low refrigerant levels in RTU-3",
+            "Cleaned condenser coils on all roof units",
+            "Replaced air filters in classrooms 101-108"
+          ]
+        },
+        {
+          "date": "May 15, 2025",
+          "technician": "John Smith",
+          "duration": "4.00 hours",
+          "summary": [
+            "Recharged refrigerant in RTU-3",
+            "Tested cooling operation in all affected classrooms",
+            "Identified and repaired minor leak in refrigerant line",
+            "Verified proper operation after repair"
+          ]
+        },
+        {
+          "date": "June 2, 2025",
+          "technician": "David Johnson",
+          "duration": "5.00 hours",
+          "summary": [
+            "Complete inspection of all VAV boxes",
+            "Recalibrated airflow sensors in rooms 110, 112, and 115",
+            "Replaced faulty damper actuator in library zone",
+            "Updated control system firmware"
+          ]
+        },
+        {
+          "date": "June 24, 2025",
+          "technician": "John Smith",
+          "duration": "5.00 hours",
+          "summary": [
+            "Preparation for summer peak load operation",
+            "Inspected all economizers and verified proper operation",
+            "Adjusted zone temperature setpoints for summer schedule",
+            "Created backup of all controller configurations"
+          ]
+        }
+      ],
+      "Springfield High School": [
+        {
+          "date": "May 7, 2025",
+          "technician": "David Johnson",
+          "duration": "5.00 hours",
+          "summary": [
+            "Troubleshooting AHU-2 serving gymnasium",
+            "Found compressor short cycling due to pressure issues",
+            "Cleaned condenser and evaporator coils",
+            "Adjusted pressure cutout settings"
+          ]
+        },
+        {
+          "date": "May 12, 2025",
+          "technician": "John Smith & Robert Garcia",
+          "duration": "6.00 hours",
+          "summary": [
+            "Further diagnostics on AHU-2 gymnasium unit",
+            "Identified damaged compressor contactor",
+            "Replaced contactor and verified proper operation",
+            "Tested all safety controls and reset operational parameters"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "summary": {
+      "locations": 3,
+      "visits": 12,
+      "hours": 52,
+      "technicians": 3
+    },
+    "monthly": [
+      { "month": "May", "hours": 30 },
+      { "month": "June", "hours": 22 }
+    ],
+    "calendar": [
+      { 
+        "month": "May", 
+        "weeks": {
+          "Week 1 (5/1-5/7)": 12,
+          "Week 2 (5/8-5/14)": 0,
+          "Week 3 (5/15-5/21)": 8,
+          "Week 4 (5/22-5/31)": 4
+        }
+      },
+      { 
+        "month": "June", 
+        "weeks": {
+          "Week 1 (6/1-6/7)": 5,
+          "Week 2 (6/8-6/14)": 4,
+          "Week 3 (6/15-6/21)": 5,
+          "Week 4 (6/22-6/30)": 8
+        }
+      }
+    ]
+  },
+  "settings": {
+    "mapCenter": {
+      "lat": 40.718,
+      "lng": -74.213
+    },
+    "mapZoom": 14
+  }
+}

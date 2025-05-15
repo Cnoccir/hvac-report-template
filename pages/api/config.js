@@ -1,4 +1,7 @@
 // pages/api/config.js
+import fs from 'fs';
+import path from 'path';
+
 // Default config if file can't be loaded
 const defaultConfig = {
   reportInfo: {
@@ -91,6 +94,25 @@ const defaultConfig = {
  * API endpoint that returns configuration
  */
 export default function handler(req, res) {
-  // Simply return the default config for now
-  res.status(200).json(defaultConfig);
+  try {
+    // Determine which config file to load
+    const configFile = process.env.NEXT_PUBLIC_CONFIG_FILE || 'default';
+    const configPath = path.join(process.cwd(), 'config', `${configFile}.json`);
+    
+    // Check if the file exists
+    if (fs.existsSync(configPath)) {
+      // Read and parse the config file
+      const configData = fs.readFileSync(configPath, 'utf8');
+      const config = JSON.parse(configData);
+      
+      console.log(`Loaded configuration from ${configFile}.json`);
+      res.status(200).json(config);
+    } else {
+      console.warn(`Config file ${configFile}.json not found, using default config`);
+      res.status(200).json(defaultConfig);
+    }
+  } catch (error) {
+    console.error('Error loading configuration:', error);
+    res.status(200).json(defaultConfig);
+  }
 }
