@@ -1,0 +1,20 @@
+{
+  "company": {
+    "name": "AME Inc.",
+    "logo": "AME Inc.",
+    "contact": "AME Inc.",
+    "address": "1275 Bloomfield Avenue"
+  },
+  "report": {
+    "sections": [
+      "summary",
+      "findings",
+      "recommendations"
+    ],
+    "theme": {
+      "primaryColor": "#6e56cf",
+      "secondaryColor": "#f4f4f5"
+    }
+  },
+  "customFields": []
+}
